@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="ja" class="dark">
 <head>
     <meta charset="UTF-8">
@@ -44,6 +45,31 @@
         }
     </script>
     <style>
+        /* GitHub Pages: keep the application shell at the full viewport width. */
+        html, body {
+            width: 100%;
+            min-width: 0;
+            margin: 0;
+        }
+        body#app-body {
+            width: 100%;
+            min-height: 100vh;
+            align-items: stretch;
+        }
+        body#app-body > header {
+            width: 100%;
+            flex: 0 0 auto;
+            box-sizing: border-box;
+        }
+        body#app-body > .flex.flex-1 {
+            width: 100%;
+            min-width: 0;
+            flex: 1 1 auto;
+        }
+        body#app-body main {
+            min-width: 0;
+        }
+
         /* Responsive heatmap columns (Tailwind has no default grid-cols-15 utility). */
         #heatmap-grid {
             display: grid;
